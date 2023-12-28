@@ -1,3 +1,4 @@
+
 import React from "react";
 import { db } from "../../firebase";
 import { collection, addDoc } from "firebase/firestore";
@@ -9,8 +10,8 @@ const { user } = UserAuth();
  
   const [title, setTitle] = React.useState("");
   const [date,setDate] =React.useState("");
-  console.log(user.email)
-  const c= user.email
+
+  const c= user.email;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
