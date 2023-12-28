@@ -10,14 +10,16 @@ import {
   doc,
   updateDoc,
   deleteDoc,
+  where,
 } from 'firebase/firestore';
 import { db } from '../../firebase';
 import Title from "./Title";
 import AddTodo from "./AddTodo";
 import Todo from "./Todo";
+import { UserAuth } from "../../context/AuthContext"
 
 export default function TodoHome() {
-
+  const { user } = UserAuth();
   // Add item to database
 
   // Read items from database
@@ -28,11 +30,16 @@ export default function TodoHome() {
   const [todos, setTodos] = React.useState([]);
 
   React.useEffect(() => {
-    const q = query(collection(db, "todos"));
+    const c1 = user.email;
+
+    const q = query(collection(db, "todos"), where("c", "==", c1));
+    
+  
+    
     const unsub = onSnapshot(q, (querySnapshot) => {
       let todosArray = [];
       querySnapshot.forEach((doc) => {
-        todosArray.push({ ...doc.data(), id: doc.id });
+        todosArray.push({ ...doc.data(), id: doc.id});
       });
       setTodos(todosArray);
     });
@@ -40,8 +47,7 @@ export default function TodoHome() {
   }, []);
 
   const handleEdit = async (todo, title, date) => {
-    console.log(date)
-    console.log(title)
+ 
     await updateDoc(doc(db, "todos", todo.id),{title:title, date:date});
     alert("Date or Title Changed")
 

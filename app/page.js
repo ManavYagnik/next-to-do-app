@@ -40,8 +40,7 @@ export default function Home() {
   }, []);
 
   const handleEdit = async (todo, title, date) => {
-    console.log(date)
-    console.log(title)
+ 
     await updateDoc(doc(db, "todos", todo.id),{title:title, date:date});
     alert("Date or Title Changed")
 
