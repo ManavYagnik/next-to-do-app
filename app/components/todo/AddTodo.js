@@ -11,7 +11,7 @@ const { user } = UserAuth();
   const [title, setTitle] = React.useState("");
   const [date,setDate] =React.useState("");
 
-  const c= user.email;
+  const c= user?.email || "Unknown";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
