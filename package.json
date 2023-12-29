@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@types/react": "18.2.45",
+    "encoding": "^0.1.13",
     "typescript": "5.3.3"
   }
 }
