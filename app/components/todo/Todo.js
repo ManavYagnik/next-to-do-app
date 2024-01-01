@@ -51,7 +51,7 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,})
         className="list border-solid"
         onChange={handleDateChange}
       />
-      <div>
+      <div className="button-container">
         <button
           className="button-complete"
           onClick={() => toggleComplete(todo)}
