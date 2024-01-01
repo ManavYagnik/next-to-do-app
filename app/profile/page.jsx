@@ -5,10 +5,14 @@ import Spinner from "../components/Spinner";
 import Title from "../components/todo/Title";
 
 import TodoHome from "../components/todo/page";
+import LoadingGif from "../components/LoadingGif"
+
 
 const page = () => {
+
   const { user } = UserAuth();
   const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
     const checkAuthentication = async () => {
@@ -35,7 +39,7 @@ const page = () => {
 </div>
        
       ) : (
-       <div className="welecome-container-2"><div className="login-message-container"><div>You must be logged in to view this page - protected route</div></div></div>
+       <div className="welecome-container-2"><div className="login-message-container"><div> <LoadingGif /></div></div></div>
       )}
     </div>
   );
