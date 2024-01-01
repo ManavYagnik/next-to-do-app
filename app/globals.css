@@ -59,8 +59,10 @@ form {
   border-radius: 5px;
   box-shadow: 1px 2px 10px #ddd;
 }
+
 form h3 {
   text-align: center;
+  font-family: 'myfont';
 }
 form input {
   width: 100%;
@@ -69,6 +71,33 @@ form input {
   font-size: 16px;
   font-family: "myfont";
   font-weight: 500;
+}
+.welcome-box{
+  width: 100%;
+
+  margin-top: 100px;
+
+
+ 
+
+  
+}
+.login-message-container{
+  height: 200px;
+  border: 2px solid;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+
+}
+.login-message-container div{
+ flex-direction: column;
+}
+.welecome-container{
+
+  height: auto;
 }
 .input_container {
   margin-bottom: 20px;
@@ -89,7 +118,17 @@ form input {
   font-family: "myfont";
   font-weight: 500;
 }
-
+.welecome-container{
+  text-align: center;
+  font-family: 'myfont';
+}
+.welecome-container-2{
+  text-align: center;
+  font-family: 'myfont';
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} 
 .todo_container {
   width: 80%;
   margin: 0 auto;

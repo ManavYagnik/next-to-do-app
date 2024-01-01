@@ -19,22 +19,23 @@ const page = () => {
   }, [user]);
 
   return (
-    <div className="p-4">
+    <div className="welcome-box">
       {loading ? (
         <Spinner />
       ) : user ? (
-        <p className="text-center">
+        <div>
+        <p className="welecome-container">
           Welcome, {user.displayName} - Please Check your To-Dos
      
-
+          </p>
          
          <TodoHome/>
 
 
-
-        </p>
+</div>
+       
       ) : (
-        <p>You must be logged in to view this page - protected route.</p>
+       <div className="welecome-container-2"><div className="login-message-container"><div>You must be logged in to view this page - protected route</div></div></div>
       )}
     </div>
   );
