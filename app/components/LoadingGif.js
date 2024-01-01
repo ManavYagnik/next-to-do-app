@@ -2,7 +2,7 @@ import React from 'react';
 
 const LoadingGif = () => {
   return (
-    <div>
+    <div className='loading-arrow'>
       <img src="/arrow.gif" alt="Loading..." />
     </div>
   );

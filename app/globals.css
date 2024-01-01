@@ -122,6 +122,9 @@ form input {
   text-align: center;
   font-family: 'myfont';
 }
+.loading-arrow{
+  transform: rotate(-20deg);
+}
 .welecome-container-2{
   text-align: center;
   font-family: 'myfont';

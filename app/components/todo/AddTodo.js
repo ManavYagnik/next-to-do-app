@@ -33,6 +33,7 @@ const { user } = UserAuth();
           type="text"
           placeholder="Enter todo..."
           value={title}
+          id="InpuT"
           onChange={(e) => setTitle(e.target.value)}
         />
       </div>
@@ -42,6 +43,7 @@ const { user } = UserAuth();
           type="date"
           placeholder=""
           value={date}
+          id="InpuT"
           onChange={(e) => setDate(e.target.value)}
         />
       </div>
