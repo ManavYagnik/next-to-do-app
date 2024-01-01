@@ -32,7 +32,7 @@ const Navbar = () => {
   }, [user]);
 
   return (
-    <div className="h-20 w-full border-b-2 flex items-center justify-between p-2">
+    <div className="h-20 w-full border-b-2 flex items-center justify-between p-2 navbar-container">
       <ul className="flex">
       
       
