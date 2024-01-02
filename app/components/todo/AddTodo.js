@@ -43,7 +43,7 @@ const { user } = UserAuth();
           type="date"
           placeholder=""
           value={date}
-          id="InpuT"
+          id="inputdate"
           onChange={(e) => setDate(e.target.value)}
         />
       </div>
