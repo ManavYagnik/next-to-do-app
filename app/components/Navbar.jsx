@@ -7,10 +7,14 @@ import { usePathname } from 'next/navigation'
 const Navbar = () => {
   const { user, googleSignIn, logOut } = UserAuth();
   const [loading, setLoading] = useState(true);
+  
 
     const pathname = usePathname();
     console.log(pathname)
-  
+  let className = 'p-2 cursor-pointer';
+  if(pathname === '/'){
+    className='p-2 cursor-pointer highlight-name'
+  }
 
   const handleSignIn = async () => {
     try {
@@ -51,10 +55,10 @@ const Navbar = () => {
 
       {loading ? null : !user ? (
         <ul className="flex">
-          <li onClick={handleSignIn} className="p-2 cursor-pointer highlight-name">
+          <li onClick={handleSignIn} className={className}>
             Login
           </li>
-          <li onClick={handleSignIn} className="p-2 cursor-pointer highlight-name">
+          <li onClick={handleSignIn} className={className} >
             Sign up
           </li>
         </ul>
