@@ -12,7 +12,7 @@ const page = () => {
   const pathname = usePathname()
 
 
-  console.log(currentLocation)
+
 
   const { user } = UserAuth();
   const [loading, setLoading] = useState(true);

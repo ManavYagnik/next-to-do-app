@@ -90,13 +90,15 @@ form input {
   border: 2px solid;
   border-color: red;
   margin-right: 2px;
+  color: red;
  
   animation-name: example;
-  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-duration: 0.4s;
 }
 @keyframes example {
-  from {border-color: red;}
-  to {border-color: yellow;}
+  from {border-color: red; color: red;}
+  to {border-color: yellow; color: yellow}
 }
 
 .login-message-container{
