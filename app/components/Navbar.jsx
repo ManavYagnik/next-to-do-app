@@ -8,7 +8,8 @@ const Navbar = () => {
   const { user, googleSignIn, logOut } = UserAuth();
   const [loading, setLoading] = useState(true);
 
-  const pathname = usePathname()
+    const pathname = usePathname();
+    console.log(pathname)
   
 
   const handleSignIn = async () => {
@@ -39,7 +40,7 @@ const Navbar = () => {
     <div className="h-20 w-full border-b-2 flex items-center justify-between p-2 navbar-container">
       <ul className="flex">
       
-   
+      
 
         {!user ? null : (
           <li className="p-2 cursor-pointer">
