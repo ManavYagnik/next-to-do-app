@@ -86,7 +86,17 @@ form input {
 }
 
 .highlight-name{
-  color: red ;
+ 
+  border: 2px solid;
+  border-color: red;
+  margin-right: 2px;
+ 
+  animation-name: example;
+  animation-duration: 4s;
+}
+@keyframes example {
+  from {border-color: red;}
+  to {border-color: yellow;}
 }
 
 .login-message-container{
