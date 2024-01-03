@@ -30,9 +30,9 @@ export default function TodoHome() {
   const [todos, setTodos] = React.useState([]);
 
   React.useEffect(() => {
-    const c1 = user.email;
+    const user_email = user.email;
 
-    const q = query(collection(db, "todos"), where("c", "==", c1));
+    const q = query(collection(db, "todos"), where("c", "==", user_email));
     
   
     
@@ -57,7 +57,10 @@ export default function TodoHome() {
     await updateDoc(doc(db, "todos", todo.id), { completed: !todo.completed });
   };
   const handleDelete = async (id) => {
+
     await deleteDoc(doc(db, "todos", id));
+    alert("todo got deleted");
+  
   };
   return (
     <div className="App">
