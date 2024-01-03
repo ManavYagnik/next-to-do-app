@@ -12,7 +12,7 @@ const page = () => {
   const pathname = usePathname()
 
 
-
+  console.log(currentLocation)
 
   const { user } = UserAuth();
   const [loading, setLoading] = useState(true);
@@ -33,7 +33,7 @@ const page = () => {
       ) : user ? (
         <div>
         <p className="welecome-container">
-        <p>Current pathname: {pathname}</p>
+      
           Welcome, {user.displayName} - Please Check your To-Dos
      
           </p>

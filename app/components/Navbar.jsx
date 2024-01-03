@@ -2,10 +2,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { UserAuth } from "../context/AuthContext";
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
   const { user, googleSignIn, logOut } = UserAuth();
   const [loading, setLoading] = useState(true);
+
+  const pathname = usePathname()
+  
 
   const handleSignIn = async () => {
     try {
@@ -35,7 +39,7 @@ const Navbar = () => {
     <div className="h-20 w-full border-b-2 flex items-center justify-between p-2 navbar-container">
       <ul className="flex">
       
-      
+   
 
         {!user ? null : (
           <li className="p-2 cursor-pointer">
@@ -46,10 +50,10 @@ const Navbar = () => {
 
       {loading ? null : !user ? (
         <ul className="flex">
-          <li onClick={handleSignIn} className="p-2 cursor-pointer">
+          <li onClick={handleSignIn} className="p-2 cursor-pointer highlight-name">
             Login
           </li>
-          <li onClick={handleSignIn} className="p-2 cursor-pointer">
+          <li onClick={handleSignIn} className="p-2 cursor-pointer highlight-name">
             Sign up
           </li>
         </ul>

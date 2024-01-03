@@ -50,6 +50,8 @@ body {
   font-family: "myfont";
   font-weight: 700;
 }
+
+
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -82,6 +84,11 @@ form input {
 
   
 }
+
+.highlight-name{
+  color: red ;
+}
+
 .login-message-container{
   height: 200px;
   border: 2px solid;
