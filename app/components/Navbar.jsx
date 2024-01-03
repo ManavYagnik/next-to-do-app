@@ -16,6 +16,8 @@ const Navbar = () => {
     className='p-2 cursor-pointer highlight-name'
   }
 
+  
+
   const handleSignIn = async () => {
     try {
       await googleSignIn();
@@ -47,7 +49,7 @@ const Navbar = () => {
       
 
         {!user ? null : (
-          <li className="p-2 cursor-pointer">
+          <li className={className}>
             <Link href="/profile">To-Do</Link>
           </li>
         )}
