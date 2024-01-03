@@ -28,7 +28,7 @@ const { user } = UserAuth();
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form-container">
       <div className="input_container">
         <input
           type="text"

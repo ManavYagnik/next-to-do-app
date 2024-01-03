@@ -57,8 +57,11 @@ form {
   margin: 0 auto;
   background: white;
   padding: 10px 20px;
-  margin-top: 50px;
+  height: 300px;
   border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
   box-shadow: 1px 2px 10px #ddd;
 }
 
@@ -111,6 +114,9 @@ form input {
 
 
 }
+.form-container{
+  background-color: rgba(200, 200, 200, 0.003);
+}
 .login-message-container div{
  flex-direction: column;
 }
@@ -120,6 +126,7 @@ form input {
 }
 .input_container {
   margin-bottom: 20px;
+
 }
 .input_container:focus {
   margin-bottom: 20px;
