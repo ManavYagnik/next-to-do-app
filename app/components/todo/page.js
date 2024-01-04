@@ -32,7 +32,7 @@ export default function TodoHome() {
   React.useEffect(() => {
     const user_email = user.email;
 
-    const q = query(collection(db, "todos"), where("c", "==", user_email));
+    const q = query(collection(db, "todos"), where("user_email", "==", user_email));
     
   
     

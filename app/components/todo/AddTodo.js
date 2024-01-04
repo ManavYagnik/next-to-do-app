@@ -12,7 +12,7 @@ const { user } = UserAuth();
   const [title, setTitle] = React.useState("");
   const [date,setDate] =React.useState("");
 
-  const c= user?.email || "Unknown";
+  const user_email= user?.email || "Unknown";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ const { user } = UserAuth();
       await addDoc(collection(db, "todos"), {
         title,
         date,
-        c,
+        user_email,
         completed: false,
       });
       setTitle("");
