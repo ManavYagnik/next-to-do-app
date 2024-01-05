@@ -24,7 +24,7 @@ export default function TodoHome() {
   // Add item to database
 
   // Read items from database
-  const notify_changed = () => toast("Todo Changed");
+  const notify_changed = () => toast("Todo May Be Changed");
   const notify_deleted = () => toast("Todo Deleted")
 
   // Delete items from database
