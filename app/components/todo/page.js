@@ -17,13 +17,15 @@ import Title from "./Title";
 import AddTodo from "./AddTodo";
 import Todo from "./Todo";
 import { UserAuth } from "../../context/AuthContext"
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function TodoHome() {
   const { user } = UserAuth();
   // Add item to database
 
   // Read items from database
- 
+  const notify_changed = () => toast("Todo Changed");
+  const notify_deleted = () => toast("Todo Deleted")
 
   // Delete items from database
 
@@ -49,7 +51,7 @@ export default function TodoHome() {
   const handleEdit = async (todo, title, date) => {
  
     await updateDoc(doc(db, "todos", todo.id),{title:title, date:date});
-    alert("Date or Title Changed")
+   notify_changed();
 
   };
   
@@ -59,7 +61,7 @@ export default function TodoHome() {
   const handleDelete = async (id) => {
 
     await deleteDoc(doc(db, "todos", id));
-    alert("todo got deleted");
+    notify_deleted();
   
   };
   return (

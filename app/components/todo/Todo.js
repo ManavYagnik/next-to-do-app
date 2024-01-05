@@ -2,10 +2,13 @@ import React from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,}) {
   const [newTitle, setNewTitle] = React.useState(todo.title);
 
-  const [newDate, setNewDate] = React.useState(todo.date)
+  const [newDate, setNewDate] = React.useState(todo.date);
+
 
   const handleTitleChange = (e) => {
     e.preventDefault();
@@ -64,7 +67,8 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,})
         >
           <EditIcon id="i" />
         </button>
-        <button className="button-delete" onClick={() => handleDelete(todo.id)}>
+        <button className="button-delete" onClick={() => handleDelete(todo.id)
+      }>
           <DeleteIcon id="i" />
         </button>
 

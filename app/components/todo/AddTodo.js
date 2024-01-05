@@ -1,11 +1,12 @@
-
+'use client'
 import React from "react";
 import { db } from "../../firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { UserAuth } from "../../context/AuthContext";
-
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function AddTodo() {
+  const notify = () => toast("Todo Added");
   
 const { user } = UserAuth();
  
@@ -49,7 +50,8 @@ const { user } = UserAuth();
         />
       </div>
       <div className="btn_container">
-        <button>Add</button>
+        <button onClick={notify}>Add</button>
+        <ToastContainer />
       </div>
     </form>
   );
