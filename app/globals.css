@@ -1,6 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -164,10 +164,11 @@ form input {
 .todo_container {
   width: 80%;
   margin: 0 auto;
+  background-color: brown;
 }
 .todo {
   margin-top: 20px;
-  background: white;
+  background: rgb(166, 162, 175);
   padding: 10px 20px;
   border-radius: 5px;
   display: flex;
@@ -178,11 +179,12 @@ form input {
 .todo input {
   cursor: pointer;
   width: 50%;
+  height:50px;
   border: none;
-  outline: none;
+  outline: 1px black;
   cursor: pointer;
-  background-color: transparent;
-  font-size: 28px;
+  background-color: green;
+  font-size: 40px;
 
   font-weight: 500;
 }
@@ -192,7 +194,7 @@ form input {
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: transparent;
+  background-color: red;
   border-radius: 50%;
 }
 #i {

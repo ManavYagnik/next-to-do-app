@@ -43,8 +43,8 @@ const Navbar = () => {
   }, [user]);
 
   return (
-    <div className="h-20 w-full border-b-2 flex items-center justify-between p-2 navbar-container">
-      <ul className="flex">
+    <div className="">
+      <ul className="">
       
       
 
@@ -56,7 +56,7 @@ const Navbar = () => {
       </ul>
 
       {loading ? null : !user ? (
-        <ul className="flex">
+        <ul className="">
           <li onClick={handleSignIn} className={className}>
             Login
           </li>
@@ -67,7 +67,7 @@ const Navbar = () => {
       ) : (
         <div>
           <p>Welcome, {user.displayName}</p>
-          <p className="cursor-pointer" onClick={handleSignOut}>
+          <p className="" onClick={handleSignOut}>
             Sign out
           </p>
         </div>
