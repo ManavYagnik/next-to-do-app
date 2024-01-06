@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { UserAuth } from "../context/AuthContext";
-import { usePathname } from 'next/navigation'
+import { usePathname, redirect } from 'next/navigation'
+
 
 const Navbar = () => {
   const { user, googleSignIn, logOut } = UserAuth();
@@ -29,6 +30,7 @@ const Navbar = () => {
   const handleSignOut = async () => {
     try {
       await logOut();
+      redirect('/');
     } catch (error) {
 
     }
@@ -50,7 +52,7 @@ const Navbar = () => {
 
         {!user ? null : (
           <li className={className}>
-         <a>   <Link href="/profile">To-Do</Link></a>
+         <a>   <Link href="/profile" className="link-todo">Click here for To-Do</Link></a>
           </li>
         )}
       </ul>
@@ -61,11 +63,11 @@ const Navbar = () => {
             Login
           </li>
           <li onClick={handleSignIn} className={className} >
-            Sign up
+            {/* Sign up */}
           </li>
         </ul>
       ) : (
-        <div>
+        <div className="welcome">
           <p>Welcome, {user.displayName}</p>
           <p className="navbar-container" onClick={handleSignOut}>
             Sign out

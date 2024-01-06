@@ -31,8 +31,8 @@ const page = () => {
       {loading ? (
         <Spinner />
       ) : user ? (
-        <div>
-        <p className="welecome-container">
+        <div >
+        <p className="welcome">
       
           Welcome, {user.displayName} - Please Check your To-Dos
      

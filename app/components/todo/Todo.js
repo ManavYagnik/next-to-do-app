@@ -40,7 +40,7 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,})
     <div className="todo">
         
   <input
-        style={{ textDecoration: todo.completed && "line-through" , fontSize:"smaller", paddingLeft:"10px"}}
+        style={{ textDecoration: todo.completed && "line-through" , fontSize:"15px", paddingLeft:"10px",width:"70%"}}
         type="list"
         value={todo.title === "" ? newTitle : todo.title}
         className="list border-solid"
@@ -48,7 +48,7 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,})
       />
 
        <input
-        style={{ textDecoration: todo.completed && "line-through",fontSize:"smaller" }}
+        style={{ textDecoration: todo.completed && "line-through",fontSize:"15px",width:"20%" , paddingLeft:"10px" }}
         type="date"
         value={todo.date === "" ? newDate : todo.date}
         className="list border-solid"

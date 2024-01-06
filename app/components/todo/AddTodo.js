@@ -14,13 +14,7 @@ import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 
 import 'react-toastify/dist/ReactToastify.css';
 export default function AddTodo() {
-  const notify = () => {   const customToastStyle = {
-    // Define your custom styles here
-    background: 'blue',
-    color: 'white',
-    // ... add any other styles you want
-};          toast("Todo Added", {
-  style: customToastStyle});}
+  const notify = () => toast("Todo Added");
   
 const { user } = UserAuth();
  
