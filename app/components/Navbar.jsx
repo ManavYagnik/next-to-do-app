@@ -10,7 +10,7 @@ const Navbar = () => {
   
 
     const pathname = usePathname();
-    console.log(pathname)
+
   let className = 'p-2 cursor-pointer';
   if(pathname === '/'){
     className='p-2 cursor-pointer highlight-name'
@@ -22,7 +22,7 @@ const Navbar = () => {
     try {
       await googleSignIn();
     } catch (error) {
-      console.log(error);
+   
     }
   };
 
