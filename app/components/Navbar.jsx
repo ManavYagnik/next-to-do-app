@@ -11,9 +11,9 @@ const Navbar = () => {
 
     const pathname = usePathname();
 
-  let className = 'p-2 cursor-pointer';
+  let className = '';
   if(pathname === '/'){
-    className='p-2 cursor-pointer highlight-name'
+    className='highlight-name'
   }
 
   
