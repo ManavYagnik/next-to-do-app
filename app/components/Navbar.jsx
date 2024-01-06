@@ -11,9 +11,9 @@ const Navbar = () => {
 
     const pathname = usePathname();
 
-  let className = 'p-2 cursor-pointer';
+  let className = '';
   if(pathname === '/'){
-    className='p-2 cursor-pointer highlight-name'
+    className='highlight-name'
   }
 
   
@@ -50,7 +50,7 @@ const Navbar = () => {
 
         {!user ? null : (
           <li className={className}>
-            <Link href="/profile">To-Do</Link>
+         <a>   <Link href="/profile">To-Do</Link></a>
           </li>
         )}
       </ul>

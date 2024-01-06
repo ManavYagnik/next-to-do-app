@@ -36,6 +36,20 @@ body {
 
 .navbar-container{
   font-family: 'myfont';
+ 
+}
+.navbar-section{
+  display: flex;
+  flex-direction: row;
+   justify-content: space-evenly;
+  align-items: center;
+  font-family: 'myfont';
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style-type: none;
 }
 
 .App {
@@ -166,7 +180,7 @@ form input {
 .todo_container {
   width: 80%;
   margin: 0 auto;
-  background-color: brown;
+ 
 }
 .todo {
   margin-top: 20px;
@@ -196,7 +210,6 @@ form input {
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: rgb(227, 28, 28);
   border-radius: 50%;
 }
 #i {
@@ -216,8 +229,6 @@ form input {
 }
 .button-complete {
   color: #95faa3;
- 
-
   margin-right: 10px;
 }
 .button-container{
