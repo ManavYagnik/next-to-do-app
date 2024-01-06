@@ -44,7 +44,7 @@ const page = () => {
 </div>
        
       ) : (
-       <div className="welecome-container-2"><div className="login-message-container"><div> <LoadingGif /></div></div></div>
+     <div className="Gif-Container"><div> <LoadingGif /></div></div>
       )}
     </div>
   );
