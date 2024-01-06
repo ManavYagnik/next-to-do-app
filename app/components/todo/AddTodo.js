@@ -10,6 +10,7 @@ import { DemoContainer, DemoItem } from '@mui/x-date-pickers/internals/demo';
 import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 
 import 'react-toastify/dist/ReactToastify.css';
 export default function AddTodo() {
@@ -53,6 +54,7 @@ const { user } = UserAuth();
           onChange={(e) => setTitle(e.target.value)}
         />
       </div>
+    
       <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DemoContainer
         components={[            
@@ -60,7 +62,8 @@ const { user } = UserAuth();
         ]}
       ><DemoItem label="">
           <StaticDatePicker defaultValue={dayjs('2022-04-17')}   value={date !== '' ? dayjs(date) : null} // Convert stored date string to Dayjs object
-        onChange={(newDate) => handleDateChange(newDate)} />
+        onChange={(newDate) => handleDateChange(newDate)}/>
+         
           
         </DemoItem>
       </DemoContainer>
