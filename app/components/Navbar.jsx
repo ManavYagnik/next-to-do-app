@@ -11,9 +11,9 @@ const Navbar = () => {
 
     const pathname = usePathname();
 
-  let className = '';
+  let className = 'p-2 cursor-pointer';
   if(pathname === '/'){
-    className='highlight-name'
+    className='p-2 cursor-pointer highlight-name'
   }
 
   
@@ -43,20 +43,20 @@ const Navbar = () => {
   }, [user]);
 
   return (
-    <div className="navbar-container">
-      <ul className="">
+    <div className="navbar-section">
+      <ul className="navbar-container">
       
       
 
         {!user ? null : (
           <li className={className}>
-            <Link href="/profile">  <a >To-Do</a></Link>
+            <Link href="/profile">To-Do</Link>
           </li>
         )}
       </ul>
 
       {loading ? null : !user ? (
-        <ul className="">
+        <ul className="navbar-container">
           <li onClick={handleSignIn} className={className}>
             Login
           </li>
@@ -67,7 +67,7 @@ const Navbar = () => {
       ) : (
         <div>
           <p>Welcome, {user.displayName}</p>
-          <p className="" onClick={handleSignOut}>
+          <p className="navbar-container" onClick={handleSignOut}>
             Sign out
           </p>
         </div>

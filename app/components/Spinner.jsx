@@ -4,7 +4,7 @@ import loader from "./spinner.gif";
 
 const Spinner = () => {
   return (
-    <div className="spinner-container">
+    <div className="w-full h-screen flex items-center justify-center">
       <Image src={loader} alt="loading.." />
     </div>
   );

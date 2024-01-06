@@ -1,17 +1,26 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
 
 :root {
-  --foreground-rgb: 0, 0, 0;  
+  --foreground-rgb: 0, 0, 0;
+  
 }
+
 @font-face {
   font-family: 'myfont';
   src: url('../Empire.ttf')format('truetype');
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 0, 0, 0;
     
   }
 }
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -21,21 +30,14 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-.Gif-Container{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid;
-  
-}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 
 .navbar-container{
   font-family: 'myfont';
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
+
 .App {
   align-items: center;
   justify-content: center;
@@ -50,6 +52,8 @@ body {
   font-family: "myfont";
   font-weight: 700;
 }
+
+
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -62,6 +66,7 @@ form {
   flex-direction: column;
   box-shadow: 1px 2px 10px #ddd;
 }
+
 form h3 {
   text-align: center;
   font-family: 'myfont';
@@ -76,9 +81,18 @@ form input {
 }
 .welcome-box{
   width: 100%;
-  margin-top: 100px; 
+
+  margin-top: 100px;
+
+
+ 
+
+  
 }
-.highlight-name{ 
+
+.highlight-name{
+ 
+  border: 2px solid;
   border-color: red;
   margin-right: 2px;
   color: red;
@@ -87,22 +101,30 @@ form input {
   animation-iteration-count: infinite;
   animation-duration: 0.4s;
 }
-a{
-  text-decoration: none;
+@keyframes example {
+  from {border-color: red; color: red;}
+  to {border-color: yellow; color: yellow}
 }
-li{
-  list-style-type: none;
-  text-decoration: none;
-}
-.spinner-container{
+
+.login-message-container{
+  height: 200px;
+  border: 2px solid;
+  width: 300px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+
 
 }
 .form-container{
   background-color: rgba(200, 200, 200, 0.003);
+}
+.login-message-container div{
+ flex-direction: column;
+}
+.welecome-container{
+
+  height: auto;
 }
 .input_container {
   margin-bottom: 20px;
@@ -127,11 +149,20 @@ li{
   font-family: "myfont";
   font-weight: 500;
 }
-
+.welecome-container{
+  text-align: center;
+  font-family: 'myfont';
+}
 .loading-arrow{
   transform: rotate(-20deg);
 }
-
+.welecome-container-2{
+  text-align: center;
+  font-family: 'myfont';
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} 
 .todo_container {
   width: 80%;
   margin: 0 auto;
@@ -154,9 +185,9 @@ li{
   border: none;
   outline: 1px black;
   cursor: pointer;
-  background-color: green;
-  font-size: 40px;
-
+  background-color: rgb(227, 245, 227);
+  font-size: 12px;
+  color: rgb(16, 15, 15);
   font-weight: 500;
 }
 .button-complete,
@@ -165,7 +196,7 @@ li{
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: red;
+  background-color: rgb(227, 28, 28);
   border-radius: 50%;
 }
 #i {
@@ -185,13 +216,16 @@ li{
 }
 .button-complete {
   color: #95faa3;
+ 
+
   margin-right: 10px;
 }
 .button-container{
-  width: 200px;
+  width: 100px;
+  margin-left: 50px;
 }
 .button-edit {
-  color: #56cfff;
+  color: #ffda56;
   margin-right: 10px;
 }
 .button-delete {
@@ -208,4 +242,22 @@ li{
 input:focus,
 button:focus {
   outline: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .todo_container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(46, 42, 165);
+  }
+
+
+}
+
+
+.navbar-container{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  cursor: pointer;
 }
