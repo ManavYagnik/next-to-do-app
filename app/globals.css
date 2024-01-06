@@ -3,22 +3,18 @@
 @tailwind utilities; */
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  
+  --foreground-rgb: 0, 0, 0;  
 }
-
 @font-face {
   font-family: 'myfont';
   src: url('../Empire.ttf')format('truetype');
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 0, 0, 0;
     
   }
 }
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -28,14 +24,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
-
 .navbar-container{
   font-family: 'myfont';
 }
-
 .App {
   align-items: center;
   justify-content: center;
@@ -50,8 +42,6 @@ body {
   font-family: "myfont";
   font-weight: 700;
 }
-
-
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -64,7 +54,6 @@ form {
   flex-direction: column;
   box-shadow: 1px 2px 10px #ddd;
 }
-
 form h3 {
   text-align: center;
   font-family: 'myfont';
@@ -79,18 +68,9 @@ form input {
 }
 .welcome-box{
   width: 100%;
-
-  margin-top: 100px;
-
-
- 
-
-  
+  margin-top: 100px; 
 }
-
-.highlight-name{
- 
-  border: 2px solid;
+.highlight-name{ 
   border-color: red;
   margin-right: 2px;
   color: red;
@@ -99,20 +79,21 @@ form input {
   animation-iteration-count: infinite;
   animation-duration: 0.4s;
 }
-@keyframes example {
-  from {border-color: red; color: red;}
-  to {border-color: yellow; color: yellow}
-}
 
 .login-message-container{
   height: 200px;
-  border: 2px solid;
   width: 300px;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
 
-
+a{
+  text-decoration: none;
+}
+li{
+  list-style-type: none;
+  text-decoration: none;
 }
 .spinner-container{
   display: flex;
@@ -221,8 +202,6 @@ form input {
 }
 .button-complete {
   color: #95faa3;
- 
-
   margin-right: 10px;
 }
 .button-container{

@@ -43,14 +43,14 @@ const Navbar = () => {
   }, [user]);
 
   return (
-    <div className="">
+    <div className="navbar-container">
       <ul className="">
       
       
 
         {!user ? null : (
           <li className={className}>
-            <Link href="/profile">To-Do</Link>
+            <Link href="/profile">  <a >To-Do</a></Link>
           </li>
         )}
       </ul>
