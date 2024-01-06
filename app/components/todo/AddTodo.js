@@ -51,6 +51,7 @@ const { user } = UserAuth();
           placeholder="Enter todo..."
           value={title}
           id="InpuT"
+          max="80"
           onChange={(e) => setTitle(e.target.value)}
         />
       </div>
