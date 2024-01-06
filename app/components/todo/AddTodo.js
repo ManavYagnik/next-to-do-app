@@ -54,19 +54,11 @@ const { user } = UserAuth();
           onChange={(e) => setTitle(e.target.value)}
         />
       </div>
-    
+      <div></div>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DemoContainer
-        components={[            
-         'StaticDatePicker',
-        ]}
-      ><DemoItem label="">
-          <StaticDatePicker defaultValue={dayjs('2022-04-17')}   value={date !== '' ? dayjs(date) : null} // Convert stored date string to Dayjs object
-        onChange={(newDate) => handleDateChange(newDate)}/>
-         
-          
-        </DemoItem>
-      </DemoContainer>
+      <DemoItem >
+  <DatePicker defaultValue={dayjs('2022-04-17')}     onChange={(newDate) => handleDateChange(newDate)}/>
+</DemoItem>
     </LocalizationProvider>
       
       <div className="btn_container">
