@@ -5,18 +5,14 @@ import Spinner from "../components/Spinner";
 import Title from "../components/todo/Title";
 
 import TodoHome from "../components/todo/page";
-import LoadingGif from "../components/LoadingGif"
+import LoadingGif from "../components/LoadingGif";
 
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation";
 const page = () => {
-  const pathname = usePathname()
-
-
-
+  const pathname = usePathname();
 
   const { user } = UserAuth();
   const [loading, setLoading] = useState(true);
-
 
   useEffect(() => {
     const checkAuthentication = async () => {
@@ -31,20 +27,22 @@ const page = () => {
       {loading ? (
         <Spinner />
       ) : user ? (
-        <div >
-        <p className="welcome">
-      
-          Welcome, {user.displayName} - Please Check your To-Dos
-     
+        <div>
+          <p className="welcome">
+            Welcome, {user.displayName} - Please Check your To-Dos
           </p>
-         
-         <TodoHome/>
 
-
-</div>
-       
+          <TodoHome />
+        </div>
       ) : (
-       <div className="welecome-container-2"><div className="login-message-container"><div> <LoadingGif /></div></div></div>
+        <div className="welecome-container-2">
+          <div className="login-message-container">
+            <div>
+              {" "}
+              <LoadingGif />
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
