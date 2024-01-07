@@ -1,42 +1,22 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
-
-
 :root {
   --foreground-rgb: 0, 0, 0;
   
 }
-
 @font-face {
   font-family: 'myfont';
   src: url('../Empire.ttf')format('truetype');
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 0, 0, 0;
     
   }
 }
-
 body {
-  /* color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
     background-image: url("../public/bg1.jpg");
     background-repeat: no-repeat;
-     background-size: cover;
+    background-size: cover;
 }
-
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
-
 .navbar-container{
   font-family: 'myfont';
   color: white;
@@ -72,8 +52,6 @@ body {
   font-family: "myfont";
   font-weight: 700;
 }
-
-
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -86,7 +64,6 @@ form {
   flex-direction: column;
   box-shadow: 1px 2px 10px #ddd;
 }
-
 form h3 {
   text-align: center;
   font-family: 'myfont';
@@ -101,35 +78,18 @@ form input {
 }
 .welcome-box{
   width: 100%;
-
-  margin-top: 100px;
-
-
-
- 
-
-  
+  margin-top: 100px; 
 }
 .welcome-box p{
   width: 100%;
-
   margin-top: 100px;
   align-items: center;
-  
-
-
- 
-
-  
 }
-
-.highlight-name{
- 
+.highlight-name{ 
   border: 2px solid;
   border-color: red;
   margin-right: 2px;
-  color: rgb(255, 255, 255);
- 
+  color: rgb(255, 255, 255); 
   animation-name: example;
   animation-iteration-count: infinite;
   animation-duration: 0.4s;
@@ -138,7 +98,6 @@ form input {
   from {border-color: red; color: red;}
   to {border-color: yellow; color: yellow}
 }
-
 .login-message-container{
   height: 200px;
   border: 2px solid;
@@ -146,8 +105,6 @@ form input {
   display: flex;
   flex-direction: row;
   align-items: center;
-
-
 }
 .form-container{
   background-color: rgba(200, 200, 200, 0.003);
@@ -161,7 +118,6 @@ color: white;
 }
 .input_container {
   margin-bottom: 20px;
-
 }
 .input_container:focus {
   margin-bottom: 20px;
@@ -186,7 +142,6 @@ color: white;
   text-align: center;
   font-family: 'myfont';
   color: white;
-
 }
 .loading-arrow{
   transform: rotate(-20deg);
@@ -201,8 +156,7 @@ color: white;
 .todo_container {
   width: 80%;
   margin: 0 auto;
- 
-}
+ }
 .todo {
   margin-top: 20px;
   background: rgb(166, 162, 175);
@@ -283,11 +237,7 @@ button:focus {
     margin: 0 auto;
     background-color: rgb(46, 42, 165);
   }
-
-
 }
-
-
 .navbar-container{
   display: flex;
   align-items: center;
@@ -299,25 +249,22 @@ button:focus {
 }
 .welcome{
   color: white;
-
   font-size: 20px;
   display: flex;
   justify-content: center;
-
   background-color: rgba(226, 146, 146, 0.5);
-  width: 50%;
-  
+  width: 50%; 
 }
-
-.welcome p{
-  
+.welcome p{  
     padding-right: 1%; /* Adjust the percentage value for horizontal space */
     padding-left: 1%; /* Adding left padding for consistency */
-
 }
 .link-todo{
   color: white;
   padding: 10px;
-  
-
+}
+.sign-out{
+  color: white;
+  border: 2px solid;
+  padding: 4px;
 }

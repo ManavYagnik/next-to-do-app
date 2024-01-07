@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import Link from "next/link";
 import { UserAuth } from "../context/AuthContext";
 import { usePathname, redirect } from 'next/navigation'
@@ -63,14 +63,19 @@ const Navbar = () => {
             Login
           </li>
           <li onClick={handleSignIn} className={className} >
-            Sign up
+            {/* Sign up */}
           </li>
         </ul>
       ) : (
+        <Fragment >
         <div className="welcome">
           <p>Welcome, {user.displayName}  </p>
-          
+         
         </div>
+        <p className="sign-out" onClick={handleSignOut}>
+              Sign out
+          </p>
+        </Fragment>
       )}
     </div>
   );
