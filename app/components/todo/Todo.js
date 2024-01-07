@@ -2,53 +2,61 @@ import React from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,}) {
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+export default function Todo({
+  todo,
+  toggleComplete,
+  handleDelete,
+  handleEdit,
+}) {
   const [newTitle, setNewTitle] = React.useState(todo.title);
 
   const [newDate, setNewDate] = React.useState(todo.date);
 
-
   const handleTitleChange = (e) => {
     e.preventDefault();
-    
+
     if (todo.complete === true) {
       setNewTitle(todo.title);
-   
-      
     } else {
       todo.title = "";
       setNewTitle(e.target.value);
-     
     }
   };
 
   const handleDateChange = (e) => {
     e.preventDefault();
     if (todo.complete === true) {
-   
-      setNewDate(todo.date)
-    
+      setNewDate(todo.date);
     } else {
       todo.date = "";
-  
-      setNewDate(e.target.value)
+
+      setNewDate(e.target.value);
     }
   };
   return (
     <div className="todo">
-        
-  <input
-        style={{ textDecoration: todo.completed && "line-through" , fontSize:"15px", paddingLeft:"10px",width:"70%"}}
+      <input
+        style={{
+          textDecoration: todo.completed && "line-through",
+          fontSize: "15px",
+          paddingLeft: "10px",
+          width: "70%",
+        }}
         type="list"
         value={todo.title === "" ? newTitle : todo.title}
         className="list border-solid"
         onChange={handleTitleChange}
       />
 
-       <input
-        style={{ textDecoration: todo.completed && "line-through",fontSize:"15px",width:"20%" , paddingLeft:"10px" }}
+      <input
+        style={{
+          textDecoration: todo.completed && "line-through",
+          fontSize: "15px",
+          width: "20%",
+          paddingLeft: "10px",
+        }}
         type="date"
         value={todo.date === "" ? newDate : todo.date}
         className="list border-solid"
@@ -67,12 +75,9 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,})
         >
           <EditIcon id="i" />
         </button>
-        <button className="button-delete" onClick={() => handleDelete(todo.id)
-      }>
+        <button className="button-delete" onClick={() => handleDelete(todo.id)}>
           <DeleteIcon id="i" />
         </button>
-
-        
       </div>
     </div>
   );
