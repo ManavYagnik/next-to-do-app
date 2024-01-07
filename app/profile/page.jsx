@@ -6,12 +6,39 @@ import Title from "../components/todo/Title";
 import TodoHome from "../components/todo/page";
 import LoadingGif from "../components/LoadingGif";
 import { usePathname } from "next/navigation";
+import { useRouter } from 'next/navigation';
 const page = () => {
   const pathname = usePathname();
 
   const { user } = UserAuth();
   const [loading, setLoading] = useState(true);
+  const [currentPath, setCurrentPath] = useState('');
+  const router = useRouter();
 
+  const initializePath = () => {
+    setCurrentPath(pathname);
+  };
+  useEffect(() => {
+    initializePath(); // Call initializePath when the component loads
+  }, []);
+  useEffect(() => {
+    if(!user){
+    
+      
+      
+    if (currentPath === '/profile') {
+      // Redirect to the home page
+      router.push('/'); // Replace '/' with your home page route
+    }
+  }
+  }, [currentPath, router]);
+
+  const handleDivLoad = () => {
+    if(!user){
+    
+    initializePath(); 
+    }
+  };
   useEffect(() => {
     const checkAuthentication = async () => {
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -32,11 +59,11 @@ const page = () => {
           <TodoHome />
         </div>
       ) : (
-        <div className="welecome-container-2">
+        <div className="welecome-container-2" onLoad={handleDivLoad}>
           <div className="login-message-container">
             <div>
               {" "}
-              <LoadingGif />
+              {/* <LoadingGif /> */}
             </div>
           </div>
         </div>
