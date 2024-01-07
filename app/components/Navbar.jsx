@@ -17,6 +17,7 @@ const Navbar = () => {
     className='highlight-name'
   }
 
+
   
 
   const handleSignIn = async () => {
@@ -31,6 +32,7 @@ const Navbar = () => {
     try {
       await logOut();
       redirect('/');
+    
     } catch (error) {
 
     }
@@ -62,9 +64,7 @@ const Navbar = () => {
           <li onClick={handleSignIn} className={className}>
             Login
           </li>
-          <li onClick={handleSignIn} className={className} >
-            {/* Sign up */}
-          </li>
+          
         </ul>
       ) : (
         <Fragment >
@@ -73,7 +73,7 @@ const Navbar = () => {
          
         </div>
         <p className="sign-out" onClick={handleSignOut}>
-              Sign out
+        <a>   <Link href="/" className="link-todo">Sign out</Link></a>
           </p>
         </Fragment>
       )}

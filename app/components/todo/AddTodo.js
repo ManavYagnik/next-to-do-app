@@ -7,11 +7,8 @@ import { ToastContainer, toast } from "react-toastify";
 import dayjs from "dayjs";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
-import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
-
 import "react-toastify/dist/ReactToastify.css";
 export default function AddTodo() {
   const notify = () => toast("Todo Added");
