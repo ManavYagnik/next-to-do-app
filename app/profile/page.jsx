@@ -3,10 +3,8 @@ import React, { useEffect, useState } from "react";
 import { UserAuth } from "../context/AuthContext";
 import Spinner from "../components/Spinner";
 import Title from "../components/todo/Title";
-
 import TodoHome from "../components/todo/page";
 import LoadingGif from "../components/LoadingGif";
-
 import { usePathname } from "next/navigation";
 const page = () => {
   const pathname = usePathname();
@@ -31,7 +29,6 @@ const page = () => {
           <p className="welcome">
             Welcome, {user.displayName} - Please Check your To-Dos
           </p>
-
           <TodoHome />
         </div>
       ) : (
