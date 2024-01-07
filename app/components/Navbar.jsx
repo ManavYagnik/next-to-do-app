@@ -63,15 +63,13 @@ const Navbar = () => {
             Login
           </li>
           <li onClick={handleSignIn} className={className} >
-            {/* Sign up */}
+            Sign up
           </li>
         </ul>
       ) : (
         <div className="welcome">
-          <p>Welcome, {user.displayName}</p>
-          <p className="navbar-container" onClick={handleSignOut}>
-            Sign out
-          </p>
+          <p>Welcome, {user.displayName}  </p>
+          
         </div>
       )}
     </div>

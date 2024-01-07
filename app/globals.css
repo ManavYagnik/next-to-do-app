@@ -105,6 +105,19 @@ form input {
   margin-top: 100px;
 
 
+
+ 
+
+  
+}
+.welcome-box p{
+  width: 100%;
+
+  margin-top: 100px;
+  align-items: center;
+  
+
+
  
 
   
@@ -286,11 +299,21 @@ button:focus {
 }
 .welcome{
   color: white;
-  text-align: center;
+
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+
   background-color: rgba(226, 146, 146, 0.5);
   width: 50%;
   
+}
+
+.welcome p{
+  
+    padding-right: 1%; /* Adjust the percentage value for horizontal space */
+    padding-left: 1%; /* Adding left padding for consistency */
+
 }
 .link-todo{
   color: white;
