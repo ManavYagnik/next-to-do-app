@@ -12,10 +12,16 @@
     
   }
 }
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
     background-image: url("../public/bg1.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover ;
+    
+  
 }
 .navbar-container{
   font-family: 'myfont';
@@ -25,6 +31,7 @@ body {
 }
 .navbar-section{
   display: flex;
+  width: 100%;
   flex-direction: row;
    justify-content: space-evenly;
   align-items: center;
@@ -86,6 +93,7 @@ form input {
   align-items: center;
 }
 .highlight-name{ 
+  text-align: center;
   border: 2px solid;
   border-color: red;
   margin-right: 2px;
@@ -225,6 +233,7 @@ color: white;
   .task {
     margin-right: 0px;
   }
+
 }
 input:focus,
 button:focus {
@@ -235,8 +244,15 @@ button:focus {
   .todo_container {
     width: 100%;
     margin: 0 auto;
-    background-color: rgb(46, 42, 165);
+    background-color: rgb(46, 42, 165);}
+    body {
+      background-image: url("../public/bg2.jpg");
+      background-repeat: repeat;
+     
+      
+    
   }
+  
 }
 .navbar-container{
   display: flex;
@@ -250,20 +266,23 @@ button:focus {
 .welcome{
   color: white;
   font-size: 20px;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   background-color: rgba(226, 146, 146, 0.5);
   width: 50%; 
 }
 .welcome p{  
+  text-align: center;
     padding-right: 1%; /* Adjust the percentage value for horizontal space */
     padding-left: 1%; /* Adding left padding for consistency */
 }
 .link-todo{
+  display: flex;
+  justify-content: center;
   color: white;
   padding: 10px;
 }
 .sign-out{
+  text-align: center;
   color: white;
   border: 2px solid;
   padding: 4px;
