@@ -52,14 +52,14 @@ const Navbar = () => {
       
       
 
-        {!user ? null : (
+        {!user ? <div></div> : (
           <li className={className}>
          <a>   <Link href="/profile" className="link-todo">Click here for To-Do</Link></a>
           </li>
         )}
       </ul>
 
-      {loading ? null : !user ? (
+      {loading ?<div></div> : !user ? (
         <ul className="navbar-container">
           <li onClick={handleSignIn} className={className}>
             Login
