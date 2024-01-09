@@ -7,7 +7,7 @@ const FontLoader = () => {
 
       <svg viewBox="0 0 1320 300">
         <text x="50%" y="50%" dy=".35em" textAnchor="middle" fontFamily="Russo One" fontSize="48">
-          My Todo
+          Todo App
         </text>
       </svg>
     </div>
