@@ -36,6 +36,7 @@ export default function AddTodo() {
       });
       setTitle("");
       setDate("");
+      notify();
     }
   };
   return (
@@ -61,7 +62,7 @@ export default function AddTodo() {
         </LocalizationProvider>
 
         <div className="btn_container">
-          <button onClick={notify}>Add</button>
+          <button >Add</button>
           <ToastContainer />
         </div>
       </form>
