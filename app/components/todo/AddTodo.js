@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { db } from "../../firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { UserAuth } from "../../context/AuthContext";
@@ -14,6 +14,7 @@ export default function AddTodo() {
   const notify = () => toast("Todo Added");
 
   const { user } = UserAuth();
+
 
   const [title, setTitle] = React.useState("");
   const [date, setDate] = React.useState("");
@@ -55,7 +56,7 @@ export default function AddTodo() {
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DemoItem>
             <DatePicker
-              defaultValue={dayjs("2022-04-17")}
+              defaultValue={dayjs()}
               onChange={(newDate) => handleDateChange(newDate)}
             />
           </DemoItem>

@@ -45,9 +45,16 @@ const Navbar = () => {
     };
     checkAuthentication();
   }, [user]);
+let className2=""
+  if(user){
+    className2="navbar-section"
+  }
+  else{
+    className2="navbar-section-home"
 
+  }
   return (
-    <div className="navbar-section">
+    <div className={className2}>
       <ul className="navbar-container">
       
       
