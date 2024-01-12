@@ -39,6 +39,7 @@ export default function AddTodo() {
       setDate("");
       notify();
     }
+    
   };
   return (
     <div>

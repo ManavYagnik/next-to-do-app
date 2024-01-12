@@ -67,7 +67,7 @@ export default function Todo({
           className="button-complete"
           onClick={() => toggleComplete(todo)}
         >
-          <CheckCircleIcon id="i" />
+          {/* <CheckCircleIcon id="i" /> */}
         </button>
         <button
           className="button-edit"
