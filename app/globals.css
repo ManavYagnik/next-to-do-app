@@ -39,7 +39,11 @@ body {
   background: #030637;
   height: 50px;
 }
-
+.spinner-loader{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
 .navbar-section-home{
   display: flex;
   width: 100%;
