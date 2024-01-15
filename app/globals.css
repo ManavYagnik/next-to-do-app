@@ -262,6 +262,10 @@ button:focus {
     margin: 0 auto;
     /* background-color: rgb(46, 42, 165); */
   }
+  .button-complete {
+    color: #95faa3;
+    margin-right: 0px;
+  }
   .link-todo{
     display: flex;
     justify-content: center;
