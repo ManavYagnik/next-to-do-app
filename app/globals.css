@@ -260,10 +260,25 @@ button:focus {
   .todo_container {
     width: 100%;
     margin: 0 auto;
-    background-color: rgb(46, 42, 165);}
+    /* background-color: rgb(46, 42, 165); */
+  }
+  .link-todo{
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 0 !important;
+   
+  }
+  .welcome p{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    background-color: rgba(226, 146, 146, 0.5);
+   
+  }
     body {
-      background-image: url("../public/bg2.jpg");
-      background-repeat: repeat;
+      /* background-image: url("../public/bg2.jpg");
+      background-repeat: repeat; */
      
       
     
